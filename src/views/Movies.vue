@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-    <div class="vue-logo-back">
-      <h2 class="logo-title">Test Task</h2>
-    </div>
+    <Navbar />
     <div class="container-fluid">
       <div class="row">
         <div
@@ -19,6 +17,7 @@
 
 <script>
 // @ is an alias to /src
+import Navbar from "@/layouts/Navbar.vue";
 import MovieCard from "@/components/MovieCard.vue";
 import axios from "axios";
 
@@ -45,6 +44,7 @@ export default {
     };
   },
   components: {
+    Navbar,
     MovieCard,
   },
 };

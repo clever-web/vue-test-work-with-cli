@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-    <div class="vue-logo-back">
-      <h2 class="logo-title" v-on:click="goToMainPage()">Test Task</h2>
-    </div>
+    <Navbar />
     <div class="container">
       <div v-if="movieDetails.id">
         <div class="row">
@@ -55,11 +53,12 @@
 </template>
 
 <script>
+import Navbar from "@/layouts/Navbar.vue";
 // @ is an alias to /src
 import axios from "axios";
 
 export default {
-  name: "customerdetails",
+  name: "moviedetails",
   mounted() {
     const API_URL =
       this.$route.params.id == 16
@@ -87,8 +86,11 @@ export default {
       movieDetails: {},
     };
   },
+  components: {
+    Navbar,
+  },
   methods: {
-    goToMainPage: function () {
+    goToMainPage: function() {
       this.$router.push("/");
     },
   },

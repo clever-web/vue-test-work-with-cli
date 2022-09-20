@@ -1,7 +1,7 @@
 <template>
   <div class="card" v-on:click="goToDetailsPage(movie.id)">
     <div class="card-body">
-      <img :src="movie.poster" class="card-img" />
+      <div :style="{'background-image': `url(${movie.poster})`}" class="card-cover-img"/>
       <p class="card-title warp" >{{ movie.name }}</p>
       <p class="card-text">{{ movie.description }}</p>
       <div class="d-flex">
