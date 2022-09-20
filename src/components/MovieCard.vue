@@ -31,7 +31,7 @@ export default {
     movie: Object,
   },
   methods: {
-    goToDetailsPage: function (id) {
+    goToDetailsPage: function(id) {
       this.$router.push("/movie/" + id);
     },
   },
