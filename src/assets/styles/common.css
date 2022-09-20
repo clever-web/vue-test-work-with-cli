@@ -1,3 +1,8 @@
+a {
+  text-decoration: underline !important;
+  color: white !important;
+}
+
 .container {
   margin-top: 150px;
 }
@@ -116,4 +121,39 @@
 
 .badge-purple {
   background-color: #702bfe;
+}
+
+.badge-red {
+  background-color: #e81a0c;
+}
+
+.details .container {
+  min-height: calc(100vh - 305px);
+}
+
+/* footer */
+.vue-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  background-color: #292d32;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  padding: 31px 48px;
+  margin-top: 50px;
+  z-index: 10;
+}
+
+.vue-footer p {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .vue-footer {
+    display: block;
+    text-align: center;
+  }
 }

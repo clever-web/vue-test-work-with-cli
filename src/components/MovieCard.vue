@@ -5,7 +5,7 @@
       <p class="card-title warp" >{{ movie.name }}</p>
       <p class="card-text">{{ movie.description }}</p>
       <div class="d-flex">
-        <div class="badge-item badge-success">
+        <div :class="`badge-item ${(movie.rating < 4 && movie.rating > 0 && 'badge-red') || (movie.rating < 7 && movie.rating > 4 && 'badge-purple') || (movie.rating < 10 && movie.rating > 7 && 'badge-success')}`">
           <img src="../assets/icons/score.png" class="badge-icon" />
           <span class="badge-text">{{ movie.rating }}</span>
         </div>

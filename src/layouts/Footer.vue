@@ -1,17 +1,16 @@
 <template>
   <div class="vue-footer">
-    <h2 class="logo-title" v-on:click="goToMainPage()">Test Task</h2>
+    <p>Test Task, 2022</p>
+    <div>
+      <a href="tel:518-363-2171">518-363-2171</a>
+      <p>91 Park St. Fairhope, AL 36532</p>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "footer",
-  methods: {
-    goToMainPage: function() {
-      this.$router.push("/");
-    },
-  },
+  name: "vue-footer",
 };
 </script>
 
