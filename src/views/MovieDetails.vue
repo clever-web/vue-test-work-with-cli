@@ -8,7 +8,7 @@
             <h2>{{ movieDetails.name }}</h2>
             <img :src="movieDetails.poster" class="desc-img" />
             <div class="d-flex mt-3">
-              <div class="badge-item badge-success">
+              <div :class="`badge-item ${(movieDetails.rating < 4 && movieDetails.rating > 0 && 'badge-red') || (movieDetails.rating < 7 && movieDetails.rating > 4 && 'badge-purple') || (movieDetails.rating < 10 && movieDetails.rating > 7 && 'badge-success')}`">
                 <img src="../assets/icons/score.png" class="badge-icon" />
                 <span class="badge-text">{{ movieDetails.rating }}</span>
               </div>
